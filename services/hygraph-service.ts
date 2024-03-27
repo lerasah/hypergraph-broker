@@ -16,10 +16,22 @@ export class HygraphService {
         });
     }
 
-    async fetchData(query: string) {
+    async fetch(query: string) {
         console.info('Query', query);
         try {
             const response = await this.client.request(query);
+            console.info('Response', response)
+            return response;
+        } catch (error) {
+            console.error('Error fetching data:', error);
+            throw error;
+        }
+    }
+
+    async mutate(mutation: string, variables: object) {
+        console.info('mutation', mutation);
+        try {
+            const response = await this.client.request(mutation, variables);
             console.info('Response', response)
             return response;
         } catch (error) {

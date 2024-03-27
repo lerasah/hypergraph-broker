@@ -44,7 +44,7 @@ class CannedResponseController {
 		}
 		try {
 			// const records = await CannedResponse.findAll({ order:[['name','ASC']]});
-			const records = await new HygraphService().fetchData(gql`
+			const records = await new HygraphService().fetch(gql`
 				{
 					cannedResponses(
 					  where: ${where}
@@ -103,6 +103,7 @@ class CannedResponseController {
 	async getCategoriesForDropdown(req: Request, res: Response<GetAllForDropdownOutputDto<CategoryEnum>[] | ErrorResponseDto>) {
 		try {
 			const items: GetAllForDropdownOutputDto<CategoryEnum>[] = [
+				{ id: CategoryEnum.Development, name: 'Test Workflow' },
 				{ id: CategoryEnum.DriversLicenseRenewal, name: 'Driver License Renewal' },
 				{ id: CategoryEnum.HealthCardRenewal, name: 'Health Card Renewal' },
 				{ id: CategoryEnum.OutdoorCardAssistance, name: 'OSAP: Ontario Student Assistance Program' },
