@@ -28,7 +28,7 @@ jobs:
 
       - name: Zip node_modules for deployment
         run: |
-          zip ./node_modules.zip ./node_modules -r
+          zip -q ./node_modules.zip ./node_modules -r
 
       - name: Zip artifact for deployment
         run: |
@@ -61,6 +61,11 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: node-app
+
+      - name: Download artifact node-modules from build job
+        uses: actions/download-artifact@v3
+        with:
+          name: node-modules
 
       - name: Unzip artifact for deployment
         run: |
