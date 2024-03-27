@@ -10,7 +10,7 @@
 		"securitySchemes": {}
 	},
 	"info": {
-		"title": "srms",
+		"title": "canned-responses-activeo",
 		"version": "0.0.1",
 		"license": {
 			"name": "ISC"

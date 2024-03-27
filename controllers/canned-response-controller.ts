@@ -7,7 +7,7 @@ import { GetAllForDropdownOutputDto } from "../models/dto/get-all-for-dropdown-o
 import { CategoryEnum } from "../models/enum/category-enum";
 import { CannedResponse } from "../models/dto/canned-response/canned-response-query-result";
 
-@Route("cannedresponses")
+@Route("canned-responses")
 class CannedResponseController {
 
 	//@Post("/add")

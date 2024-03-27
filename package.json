@@ -1,5 +1,5 @@
 {
-  "name": "srms",
+  "name": "canned-responses-activeo",
   "version": "0.0.1",
   "description": "",
   "main": "server.ts",
@@ -20,6 +20,7 @@
     "express-validator": "^7.0.1",
     "joi": "^17.12.2",
     "morgan": "^1.10.0",
+    "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.0",
     "tsoa": "^6.2.0"
   },
