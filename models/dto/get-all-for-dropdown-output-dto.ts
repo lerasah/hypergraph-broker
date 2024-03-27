@@ -1,4 +1,4 @@
-export interface GetAllForDropdownOutputDto {
-    id: number,
+export interface GetAllForDropdownOutputDto<T> {
+    id: T,
     name: string
 }

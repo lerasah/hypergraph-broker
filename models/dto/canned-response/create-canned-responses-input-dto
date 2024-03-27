@@ -1,0 +1,9 @@
+import { CategoryEnum } from '../../enum/category-enum'
+
+export interface CreateCannedResponseInputDto {
+    title: string //req
+    categoryEnum: CategoryEnum //req
+    templateContentRawHtml: string //req
+    tags: string[]
+    assetIds: string[]
+}

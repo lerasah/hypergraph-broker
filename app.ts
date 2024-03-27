@@ -1,7 +1,8 @@
 import express, { Response } from "express";
-import studentRouter from "./routes/student-router";
-import courseRouter from "./routes/course-router";
-import resultRouter from "./routes/result-router";
+// import studentRouter from "./routes/student-router";
+// import courseRouter from "./routes/course-router";
+// import resultRouter from "./routes/result-router";
+import cannedresponsesrouter from "./routes/canned-response-router";
 import morgan from "morgan";
 import swaggerUi from "swagger-ui-express";
 
@@ -10,9 +11,7 @@ const app = express();
 app.use(morgan("tiny"));
 app.use(express.json());
 
-app.use("/api/v1/students", studentRouter);
-app.use("/api/v1/courses", courseRouter);
-app.use("/api/v1/results", resultRouter);
+app.use("/api/v1/cannedresponses", cannedresponsesrouter);
 
 app.use(express.static("public"));
 app.use(

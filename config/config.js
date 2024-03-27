@@ -2,27 +2,15 @@ require('dotenv').config()
 
 module.exports = {
   development: {
-    dialect: 'mysql',
-    database: process.env.MYSQL_DB_NAME || 'srms',
-    username: process.env.MYSQL_DB_USERNAME || 'root',
-    password: process.env.MYSQL_DB_PASSWORD || 'root',
-    host: process.env.MYSQL_DB_HOST || 'localhost',
-    port: parseInt(process.env.MYSQL_DB_PORT || '3306')
+    HYGRAPH_CONTENT_API:process.env.HYGRAPH_CONTENT_API || '',
+    HYGRAPH_TOKEN:process.env.HYGRAPH_TOKEN || ''
   },
   test: {
-    dialect: 'mysql',
-    database: process.env.MYSQL_DB_NAME || 'srms',
-    username: process.env.MYSQL_DB_USERNAME || 'root',
-    password: process.env.MYSQL_DB_PASSWORD || 'root',
-    host: process.env.MYSQL_DB_HOST || 'localhost',
-    port: parseInt(process.env.MYSQL_DB_PORT || '3306')
+    HYGRAPH_CONTENT_API:process.env.HYGRAPH_CONTENT_API || '',
+    HYGRAPH_TOKEN:process.env.HYGRAPH_TOKEN || ''
   },
   production: {
-    dialect: 'mysql',
-    database: process.env.MYSQL_DB_NAME,
-    username: process.env.MYSQL_DB_USERNAME,
-    password: process.env.MYSQL_DB_PASSWORD,
-    host: process.env.MYSQL_DB_HOST,
-    port: parseInt(process.env.MYSQL_DB_PORT)
+    HYGRAPH_CONTENT_API:process.env.HYGRAPH_CONTENT_API || '',
+    HYGRAPH_TOKEN:process.env.HYGRAPH_TOKEN || ''
   }
 }

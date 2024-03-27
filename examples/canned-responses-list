@@ -1,0 +1,113 @@
+{
+  "data": {
+    "cannedResponses": [
+      {
+        "id": "clu8iocfdvs5m07k52jcg0z3n",
+        "title": "Driver's License Delivery",
+        "category": "DriversLicenseRenewal",
+        "tags": [
+          "drivers",
+          "license",
+          "delivery"
+        ],
+        "templateContent": {
+          "html": "<p>Thank you for your email.</p><p></p><p>Your new driver’s licence card will arrive in the mail within 4 to 6 weeks. If you haven’t received your license within 6 weeks, you can contact Service Ontario via 1-800-267-8097.  </p><p></p><p>___</p><p>Thanks</p><p></p><p>{agent_name}</p><p>Customer Service</p>",
+          "markdown": "Thank you for your email.\n\n\n\nYour new driver’s licence card will arrive in the mail within 4 to 6 weeks. If you haven’t received your license within 6 weeks, you can contact Service Ontario via 1-800-267-8097.\n\n\n\n\\_\\_\\_\n\nThanks\n\n\n\n{agent_name}\n\nCustomer Service\n"
+        },
+        "attachments": []
+      },
+      {
+        "id": "clu8iq885x1a308lhs0osc837",
+        "title": "Driver’s License - Temporary License ",
+        "category": "DriversLicenseRenewal",
+        "tags": [
+          "drivers",
+          "license",
+          "temporary"
+        ],
+        "templateContent": {
+          "html": "<p>Thank you for your email.</p><p></p><p>When you renew online you will receive a temporary driver’s licence validation document if: </p><ul><li><div>your driver’s licence has already expired</div></li><li><div>you renew online within 28 days of your current driver’s licence expiry date. </div></li></ul><p></p><p>You can use this temporary license until you receive your driver’s license.  </p><p></p><p>___</p><p>Thanks</p><p></p><p>{agent_name}</p><p>Customer Service</p>",
+          "markdown": "Thank you for your email.\n\n\n\nWhen you renew online you will receive a temporary driver’s licence validation document if:\n\n-   your driver’s licence has already expired\n-   you renew online within 28 days of your current driver’s licence expiry date.\n\n\n\nYou can use this temporary license until you receive your driver’s license.\n\n\n\n\\_\\_\\_\n\nThanks\n\n\n\n{agent_name}\n\nCustomer Service\n"
+        },
+        "attachments": [
+          {
+            "fileName": "license.pdf",
+            "mimeType": "application/pdf",
+            "size": 317244,
+            "url": "https://us-east-1-shared-usea1-02.graphassets.com/clu8i2ok50z2h07jy48kf61ww/clu8ipz7svsxi07k51ar8tza9",
+            "id": "clu8ipz7svsxh07k53tcfpgbs",
+            "handle": "clu8ipz7svsxi07k51ar8tza9"
+          }
+        ]
+      },
+      {
+        "id": "clu8it7d4vu8e07k5eq2cwrrm",
+        "title": "Healthcard Renewal Date",
+        "category": "HealthCardRenewal",
+        "tags": [
+          "healthcard",
+          "renewal",
+          "date"
+        ],
+        "templateContent": {
+          "html": "<p>Thank you for your email.  </p><p>If you have lost your renewal reminder, you can print another of the attached form and send it to </p><blockquote><em>ServiceOntario</em></blockquote><blockquote><em>PO Box 48</em></blockquote><blockquote><em>Kingston, ON K7L 5J3 </em></blockquote><p>___</p><p>Thanks</p><p>{agent_name}</p>",
+          "markdown": "Thank you for your email.\n\nIf you have lost your renewal reminder, you can print another of the attached form and send it to\n\n> _ServiceOntario_\n\n> _PO Box 48_\n\n> _Kingston, ON K7L 5J3_\n\n\\_\\_\\_\n\nThanks\n\n{agent_name}\n"
+        },
+        "attachments": [
+          {
+            "fileName": "health-card-home.pdf",
+            "mimeType": "application/pdf",
+            "size": 1647058,
+            "url": "https://us-east-1-shared-usea1-02.graphassets.com/clu8i2ok50z2h07jy48kf61ww/clu8iseo0x28s08lh23j5qzse",
+            "id": "clu8iseo0x28r08lh79isted2",
+            "handle": "clu8iseo0x28s08lh23j5qzse"
+          }
+        ]
+      },
+      {
+        "id": "clu8iwqo9x47j08lhigy77564",
+        "title": "Lost Outdoor Card",
+        "category": "OutdoorCardAssistance",
+        "tags": [
+          "outdoor",
+          "card",
+          "cost"
+        ],
+        "templateContent": {
+          "html": "<p>Hi {sender}</p><p>Thank you for your email.  </p><p>The cost to buy, renew or replace your lost, stolen or damaged Outdoors Card is $8.57 +HST. </p><p>You can pay by VISA, VISA debit, MasterCard or Debit Mastercard. We do not accept American Express. </p><p>___</p><p>Thanks</p><p>{agent_name}</p>",
+          "markdown": "Hi {sender}\n\nThank you for your email.\n\nThe cost to buy, renew or replace your lost, stolen or damaged Outdoors Card is $8.57 +HST.\n\nYou can pay by VISA, VISA debit, MasterCard or Debit Mastercard. We do not accept American Express.\n\n\\_\\_\\_\n\nThanks\n\n{agent_name}\n"
+        },
+        "attachments": [
+          {
+            "fileName": "outdoor-card.pdf",
+            "mimeType": "application/pdf",
+            "size": 0,
+            "url": "https://us-east-1-shared-usea1-02.graphassets.com/clu8i2ok50z2h07jy48kf61ww/clu8iw7cfvvo607k5t8rwlb8f",
+            "id": "clu8iw7cfvvo507k5yqknppms",
+            "handle": "clu8iw7cfvvo607k5t8rwlb8f"
+          }
+        ]
+      },
+      {
+        "id": "clu8iy8y8x4vb08lh6r9l4vag",
+        "title": "Outdoor Cards Requirements",
+        "category": "OutdoorCardAssistance",
+        "tags": [],
+        "templateContent": {
+          "html": "<p>Hi {sender}</p><p>Thank you for your email.  </p><p>To buy, renew or replace an Outdoors Card, you need to provide your: </p><ul><li><div><p>legal first, middle and last name </p></div></li><li><div><p>date of birth </p></div></li><li><div><p>mailing and/or residential address </p></div></li><li><div><p>height and eye colour </p></div></li><li><div><p>parental consent (for resident hunters 12 to 15 years old) </p></div></li></ul><p>___</p><p>Thanks</p><p>{agent_name}</p>",
+          "markdown": "Hi {sender}\n\nThank you for your email.\n\nTo buy, renew or replace an Outdoors Card, you need to provide your:\n\n-   legal first, middle and last name\n-   date of birth\n-   mailing and/or residential address\n-   height and eye colour\n-   parental consent (for resident hunters 12 to 15 years old)\n\n\\_\\_\\_\n\nThanks\n\n{agent_name}\n"
+        },
+        "attachments": [
+          {
+            "fileName": "outdoor-card.pdf",
+            "mimeType": "application/pdf",
+            "size": 0,
+            "url": "https://us-east-1-shared-usea1-02.graphassets.com/clu8i2ok50z2h07jy48kf61ww/clu8iw7cfvvo607k5t8rwlb8f",
+            "id": "clu8iw7cfvvo507k5yqknppms",
+            "handle": "clu8iw7cfvvo607k5t8rwlb8f"
+          }
+        ]
+      }
+    ]
+  }
+}

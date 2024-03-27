@@ -1,11 +1,8 @@
 import http from 'http'
-import db from './db'
-import { initModels } from './models'
 import app from "./app";
 
 async function run() {
 
-  initModels(db)
   const hostname = process.env.HOSTNAME || '127.0.0.1'
   const port = parseInt(process.env.PORT || '3000')
   
@@ -20,8 +17,5 @@ async function run() {
   })
 }
 
-db.sync().then(() => {
-  console.log("Connected to DB");
-  run();
-});
+run();
 
