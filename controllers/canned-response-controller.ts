@@ -23,7 +23,7 @@ class CannedResponseController {
 	}
 
 	//@Get()
-    async getAll(res: Response<CannedResponse[] | ErrorResponseDto>) {
+    async getAll(req: Request, res: Response<CannedResponse[] | ErrorResponseDto>) {
 		try {
 			// const records = await CannedResponse.findAll({ order:[['name','ASC']]});
 			return res.json([]);
@@ -54,7 +54,7 @@ class CannedResponseController {
 	}
 
 	//@Get()
-    async getCategoriesForDropdown(res: Response<GetAllForDropdownOutputDto<CategoryEnum>[] | ErrorResponseDto>) {
+    async getCategoriesForDropdown(req: Request, res: Response<GetAllForDropdownOutputDto<CategoryEnum>[] | ErrorResponseDto>) {
 		try {
 			const items: GetAllForDropdownOutputDto<CategoryEnum>[] = [
 				{ id: CategoryEnum.DriversLicenseRenewal, name: 'Driver License Renewal' },
