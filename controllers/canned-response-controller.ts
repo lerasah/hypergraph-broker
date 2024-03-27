@@ -6,13 +6,24 @@ import { ErrorResponseDto } from "../models/dto/common/error-response-dto";
 import { GetAllForDropdownOutputDto } from "../models/dto/get-all-for-dropdown-output-dto";
 import { CategoryEnum } from "../models/enum/category-enum";
 import { CannedResponse } from "../models/dto/canned-response/canned-response-query-result";
+import { HygraphService } from '../services/hygraph-service'
+import { gql } from "graphql-request";
+
+//const hy = new HygraphService();
 
 @Route("canned-responses")
 class CannedResponseController {
 
+	private hy: any; // Declare the type of the client property
+
+    constructor() {
+		console.log('ctor called');
+        this.hy = new HygraphService();
+    }
+
 	//@Post("/add")
 	async add(req: Request, res: Response<CreatedResponseDto<CannedResponse> | ErrorResponseDto>) {
-		
+
 		try {
 			// const record = await CannedResponse.create({ ...req.body });
 			const record = {} as CreatedResponseDto<CannedResponse>;
@@ -23,11 +34,39 @@ class CannedResponseController {
 	}
 
 	//@Get()
-    async getAll(req: Request, res: Response<CannedResponse[] | ErrorResponseDto>) {
+	async getAll(req: Request, res: Response<CannedResponse[] | ErrorResponseDto>) {
 		try {
 			// const records = await CannedResponse.findAll({ order:[['name','ASC']]});
-			return res.json([]);
+			const records = await new HygraphService().fetchData(gql`
+				{
+					cannedResponses(
+					  where: {category: DriversLicenseRenewal}
+					  orderBy: title_ASC
+					) {
+					  id
+					  title
+					  category
+					  tags
+					  templateContent {
+						html
+						markdown
+					  }
+					  attachments {
+						fileName
+						mimeType
+						size
+						url
+						handle
+						id
+					  }
+					}
+				  }`);
+
+			console.info(records)
+
+			return res.json(records?.cannedResponses || []);
 		} catch (e) {
+			console.error(e);
 			return res.status(500).json({ msg: "Failed to fetch Canned Responses" });
 		}
 	}
@@ -46,15 +85,15 @@ class CannedResponseController {
 			return res.status(204).end();
 		} catch (e) {
 			return res
-                .status(500)
-                .json({
-                    msg: "Failed to delete"
-                });
+				.status(500)
+				.json({
+					msg: "Failed to delete"
+				});
 		}
 	}
 
 	//@Get()
-    async getCategoriesForDropdown(req: Request, res: Response<GetAllForDropdownOutputDto<CategoryEnum>[] | ErrorResponseDto>) {
+	async getCategoriesForDropdown(req: Request, res: Response<GetAllForDropdownOutputDto<CategoryEnum>[] | ErrorResponseDto>) {
 		try {
 			const items: GetAllForDropdownOutputDto<CategoryEnum>[] = [
 				{ id: CategoryEnum.DriversLicenseRenewal, name: 'Driver License Renewal' },
