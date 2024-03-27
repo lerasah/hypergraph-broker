@@ -26,14 +26,26 @@ jobs:
           yarn
           npm run build --if-present
 
+      - name: Zip node_modules for deployment
+        run: |
+          zip -q ./node_modules.zip ./node_modules -r
+
       - name: Zip artifact for deployment
-        run: zip dist.zip ./* -r
+        run: |
+          cd dist
+          zip ../release.zip ./* -r
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
           name: node-app
-          path: dist.zip
+          path: release.zip
+
+      - name: Upload artifact (node_modules) for deployment job
+        uses: actions/upload-artifact@v3
+        with:
+          name: node-modules
+          path: node_modules.zip
 
   deploy:
     runs-on: ubuntu-latest
@@ -51,7 +63,11 @@ jobs:
           name: node-app
 
       - name: Unzip artifact for deployment
-        run: unzip dist.zip
+        run: |
+          unzip release.zip
+          unzip -q node_modules.zip
+          rm release.zip node_modules.zip
+          tree
       
       - name: Login to Azure
         uses: azure/login@v1
