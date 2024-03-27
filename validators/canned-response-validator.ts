@@ -7,6 +7,17 @@ import { body, param, query } from 'express-validator';
 // assetIds
 
 class CannedResponseValidator {
+    checkGetResponse() {
+        return [
+            query('category')
+                .optional()
+                .notEmpty()
+                .withMessage('The value should not be empty')
+                .isIn(['DriversLicenseRenewal', 'HealthCardRenewal', 'OSAPAssistance', 'OutdoorCardAssistance'])
+                .withMessage('The value should be one of DriversLicenseRenewal, HealthCardRenewal, OSAPAssistance, OutdoorCardAssistance.'),
+        ];
+    }
+
     checkAddCannedResponse() {
         return [
             body('title')

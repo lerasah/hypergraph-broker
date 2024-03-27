@@ -15,7 +15,9 @@ router.post(
 
 router.get(
 	'/',
-	CannedResponseController.getAll
+	CannedResponseValidator.checkGetResponse(),
+	Middleware.handleValidationError,
+	CannedResponseController.getAll,
 );
 
 router.delete(

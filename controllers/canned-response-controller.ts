@@ -35,12 +35,19 @@ class CannedResponseController {
 
 	//@Get()
 	async getAll(req: Request, res: Response<CannedResponse[] | ErrorResponseDto>) {
+		const { category } = req.query;
+		// console.info(req.query)
+		var where = `{}`;
+		if(category){
+			console.log(`Category ${category}`);
+			where = `{category: ${category}}`
+		}
 		try {
 			// const records = await CannedResponse.findAll({ order:[['name','ASC']]});
 			const records = await new HygraphService().fetchData(gql`
 				{
 					cannedResponses(
-					  where: {category: DriversLicenseRenewal}
+					  where: ${where}
 					  orderBy: title_ASC
 					) {
 					  id

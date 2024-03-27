@@ -17,9 +17,10 @@ export class HygraphService {
     }
 
     async fetchData(query: string) {
+        console.info('Query', query);
         try {
             const response = await this.client.request(query);
-            console.info(response)
+            console.info('Response', response)
             return response;
         } catch (error) {
             console.error('Error fetching data:', error);
