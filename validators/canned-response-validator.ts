@@ -13,7 +13,7 @@ class CannedResponseValidator {
                 .optional()
                 .notEmpty()
                 .withMessage('The value should not be empty')
-                .isIn(['DriversLicenseRenewal', 'HealthCardRenewal', 'OSAPAssistance', 'OutdoorCardAssistance'])
+                .isIn(['Development','DriversLicenseRenewal', 'HealthCardRenewal', 'OSAPAssistance', 'OutdoorCardAssistance'])
                 .withMessage('The value should be one of DriversLicenseRenewal, HealthCardRenewal, OSAPAssistance, OutdoorCardAssistance.'),
         ];
     }
@@ -31,7 +31,7 @@ class CannedResponseValidator {
             body('categoryEnum')
                 .exists()
                 .withMessage('The value should not be empty')
-                .isIn(['DriversLicenseRenewal', 'HealthCardRenewal', 'OSAPAssistance', 'OutdoorCardAssistance'])
+                .isIn(['Development','DriversLicenseRenewal', 'HealthCardRenewal', 'OSAPAssistance', 'OutdoorCardAssistance'])
                 .withMessage('The value should be one of DriversLicenseRenewal, HealthCardRenewal, OSAPAssistance, OutdoorCardAssistance.'),
             body('templateContentRawHtml')
                 .exists()
