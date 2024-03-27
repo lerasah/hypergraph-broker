@@ -28,7 +28,7 @@ jobs:
 
       - name: Zip node_modules for deployment
         run: |
-          zip -q ./node_modules.zip ./node_modules -r
+          zip ./node_modules.zip ./node_modules -r
 
       - name: Zip artifact for deployment
         run: |
